@@ -31,7 +31,7 @@ public class InventoryManager implements Serializable {
   String password;
 
   @ManyToOne
-  @JoinColumn(name="hospital_id", nullable=false, updatable=false)
+  @JoinColumn(name="hospital_id", referencedColumnName="id", nullable=false, updatable=false)
   Hospital hospital;
 
   public InventoryManager(String userid, String password, Hospital hospital) {
