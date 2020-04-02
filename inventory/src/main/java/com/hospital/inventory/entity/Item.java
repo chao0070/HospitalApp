@@ -1,6 +1,7 @@
 package com.hospital.inventory.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -15,6 +16,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "items")
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Item implements Serializable {

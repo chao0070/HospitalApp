@@ -1,7 +1,7 @@
 -- Define certain unique keys
 -- DEfine certain indexes
 
-create table if not exists  (
+create table if not exists hospital (
    id serial not null,
    name text not null,
    location text,
@@ -29,10 +29,10 @@ create table if not exists items (
 );
 ALTER SEQUENCE items_id_seq RESTART WITH 1 INCREMENT BY 1;
 
-create table if not exists hospital_item_inventory (
+create table if not exists inventory (
   hospital_id int not null,
   item_id int not null,
-  inventory int not null,
+  quantity int not null,
   primary key (hospital_id, item_id),
   foreign key (hospital_id) references hospital(id) on DELETE CASCADE,
   foreign key (item_id) references items(id) on DELETE CASCADE
